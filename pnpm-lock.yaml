@@ -9,11 +9,11 @@ importers:
   .:
     dependencies:
       '@aws-cdk/toolkit-lib':
-        specifier: ^1.2.4
-        version: 1.2.4(@aws-cdk/cli-plugin-contract@2.181.0)
+        specifier: ^1.4.0
+        version: 1.4.0(@aws-cdk/cli-plugin-contract@2.181.0)
       aws-cdk-lib:
-        specifier: ^2.204.0
-        version: 2.204.0(constructs@10.4.2)
+        specifier: ^2.208.0
+        version: 2.208.0(constructs@10.4.2)
       commander:
         specifier: ^14.0.0
         version: 14.0.0
@@ -30,6 +30,9 @@ importers:
       '@vitest/ui':
         specifier: ^3.2.4
         version: 3.2.4(vitest@3.2.4)
+      aws-cdk:
+        specifier: ^2.1023.0
+        version: 2.1023.0
       eslint:
         specifier: ^9.30.1
         version: 9.30.1
@@ -78,6 +81,13 @@ packages:
       - jsonschema
       - semver
 
+  '@aws-cdk/cloud-assembly-schema@48.2.0':
+    resolution: {integrity: sha512-HtuLt64mR7UyM566UsC0BZsm8txWPHl4OxuBAizrSQU6QtlYaCCtmLNSqNdNo4j8zuZMuKb0re+Rj6lRKk4oOg==}
+    engines: {node: '>= 18.0.0'}
+    bundledDependencies:
+      - jsonschema
+      - semver
+
   '@aws-cdk/cloudformation-diff@2.182.0':
     resolution: {integrity: sha512-FqqOrvlq/a+hWkynr98aLGq+8JvjYpxKzznNKnJLh2CsJylku7xJY+CwttZYOPtFFc1+svgHzNbyVzDHndldYA==}
     engines: {node: '>= 18.0.0'}
@@ -98,8 +108,8 @@ packages:
   '@aws-cdk/service-spec-types@0.0.151':
     resolution: {integrity: sha512-x3B7VQJo49AwmIv7RLl2bYmmKXA+np/OrKWWCCb1LQlK/B8/bx6QylHcqF+sLK7hmuOILRVrhMSrbo3B5FDnNA==}
 
-  '@aws-cdk/toolkit-lib@1.2.4':
-    resolution: {integrity: sha512-/qEWfQSbb5UlYwyTYnXcFGVaffeD5cVUZPMqbcRWC2sHPzSMGQpW12u2V2ygtxFIQUN8Km0ha+4QsyZDcHQzeQ==}
+  '@aws-cdk/toolkit-lib@1.4.0':
+    resolution: {integrity: sha512-skEYN4DDnvXMt25PlZszcNRUeGo6/oYvCceCYIgH3en+R3ZmN2hvXCnHvQpXt0hZu2yDkkeRquyLW0ec+JcKDA==}
     engines: {node: '>= 18.0.0'}
     peerDependencies:
       '@aws-cdk/cli-plugin-contract': ^2
@@ -795,6 +805,7 @@ packages:
   '@smithy/middleware-endpoint@4.1.14':
     resolution: {integrity: sha512-+BGLpK5D93gCcSEceaaYhUD/+OCGXM1IDaq/jKUQ+ujB0PTWlWN85noodKw/IPFZhIKFCNEe19PGd/reUMeLSQ==}
     engines: {node: '>=18.0.0'}
+    deprecated: Please upgrade to @smithy/middleware-endpoint@4.1.15 or higher to fix a bug preventing the resolution of ENV and config file custom endpoints https://github.com/smithy-lang/smithy-typescript/issues/1645
 
   '@smithy/middleware-retry@4.1.15':
     resolution: {integrity: sha512-iKYUJpiyTQ33U2KlOZeUb0GwtzWR3C0soYcKuCnTmJrvt6XwTPQZhMfsjJZNw7PpQ3TU4Ati1qLSrkSJxnnSMQ==}
@@ -1101,8 +1112,8 @@ packages:
     resolution: {integrity: sha512-+q/t7Ekv1EDY2l6Gda6LLiX14rU9TV20Wa3ofeQmwPFZbOMo9DXrLbOjFaaclkXKWidIaopwAObQDqwWtGUjqg==}
     engines: {node: '>= 4.0.0'}
 
-  aws-cdk-lib@2.204.0:
-    resolution: {integrity: sha512-mY3nYu+QvPhO+fz+LCFKbc0PFhTHbHzDLnbcA2fPcQBKciYnTixpBd2ccRlKYWbG4y6NTc6ju6DudZ3HIS4OlA==}
+  aws-cdk-lib@2.208.0:
+    resolution: {integrity: sha512-lZW475enKz36A/hZvS7xUwfjeqLqxKgBmZ2cGA7BB5PAlQsjBfN70ZGDgGl0egug5fb/hsYy1Dy4OrclfNzxFg==}
     engines: {node: '>= 14.15.0'}
     peerDependencies:
       constructs: ^10.0.0
@@ -1118,6 +1129,11 @@ packages:
       - table
       - yaml
       - mime-types
+
+  aws-cdk@2.1023.0:
+    resolution: {integrity: sha512-DWMA+IrAsBUNF2RvH7ujpDp7wSJkqTkRL8yfK4AYpEjoGY1KMaKIfxz3M3+Nk3ogM7VhZiW3OGWEOgyDF47HOQ==}
+    engines: {node: '>= 18.0.0'}
+    hasBin: true
 
   b4a@1.6.7:
     resolution: {integrity: sha512-OnAYlL5b7LEkALw87fUVafQw5rVR9RjwGd4KUwNQ6DrrNmaVaUCgLipfVlzrPQ4tWOR9P0IXGNOx50jYCCdSJg==}
@@ -1166,8 +1182,8 @@ packages:
     resolution: {integrity: sha512-P8BjAsXvZS+VIDUI11hHCQEv74YT67YUi5JJFNWIqL235sBmjX4+qx9Muvls5ivyNENctx46xQLQ3aTuE7ssaQ==}
     engines: {node: '>=6'}
 
-  cdk-from-cfn@0.226.0:
-    resolution: {integrity: sha512-FZQYea4pSVhy+DChWQMlUV9MUOzOGHpd2zmYKImPJ82w6kwjFQWVlpGPkmm3SXHp+z+fOGcjoh/QII1hdd+cnQ==}
+  cdk-from-cfn@0.230.0:
+    resolution: {integrity: sha512-eINSdKw6aug5lZfmUBgEscMNkSUzewu6qjeUpETzUYH7yUzwem3F2279tS++CJaZj2VvZieprCL2X/a4N5dAjQ==}
 
   chai@5.2.1:
     resolution: {integrity: sha512-5nFxhUrX0PqtyogoYOA8IPswy5sZFTOsBFl/9bNsmDLgsxYTzSZQJDPppDnZPTQbzSEm0hqGjWPzRemQCYbD6A==}
@@ -1392,6 +1408,11 @@ packages:
   fs-extra@9.1.0:
     resolution: {integrity: sha512-hcg3ZmepS30/7BSFqRvoo3DOMQu7IjqxO5nCDt+zM9XWjb33Wg7ziNT+Qvqbuc3+gWpzO02JubVyk2G4Zvo1OQ==}
     engines: {node: '>=10'}
+
+  fsevents@2.3.2:
+    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
+    engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
+    os: [darwin]
 
   fsevents@2.3.3:
     resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==}
@@ -2019,8 +2040,8 @@ snapshots:
 
   '@aws-cdk/cdk-assets-lib@1.0.1':
     dependencies:
-      '@aws-cdk/cloud-assembly-schema': 45.2.0
-      '@aws-cdk/cx-api': 2.204.0(@aws-cdk/cloud-assembly-schema@45.2.0)
+      '@aws-cdk/cloud-assembly-schema': 48.2.0
+      '@aws-cdk/cx-api': 2.204.0(@aws-cdk/cloud-assembly-schema@48.2.0)
       '@aws-sdk/client-ecr': 3.844.0
       '@aws-sdk/client-s3': 3.844.0
       '@aws-sdk/client-secrets-manager': 3.844.0
@@ -2040,6 +2061,8 @@ snapshots:
 
   '@aws-cdk/cloud-assembly-schema@45.2.0': {}
 
+  '@aws-cdk/cloud-assembly-schema@48.2.0': {}
+
   '@aws-cdk/cloudformation-diff@2.182.0(@aws-sdk/client-cloudformation@3.844.0)':
     dependencies:
       '@aws-cdk/aws-service-spec': 0.1.85
@@ -2051,9 +2074,9 @@ snapshots:
       string-width: 4.2.3
       table: 6.9.0
 
-  '@aws-cdk/cx-api@2.204.0(@aws-cdk/cloud-assembly-schema@45.2.0)':
+  '@aws-cdk/cx-api@2.204.0(@aws-cdk/cloud-assembly-schema@48.2.0)':
     dependencies:
-      '@aws-cdk/cloud-assembly-schema': 45.2.0
+      '@aws-cdk/cloud-assembly-schema': 48.2.0
 
   '@aws-cdk/service-spec-types@0.0.145':
     dependencies:
@@ -2063,13 +2086,13 @@ snapshots:
     dependencies:
       '@cdklabs/tskb': 0.0.3
 
-  '@aws-cdk/toolkit-lib@1.2.4(@aws-cdk/cli-plugin-contract@2.181.0)':
+  '@aws-cdk/toolkit-lib@1.4.0(@aws-cdk/cli-plugin-contract@2.181.0)':
     dependencies:
       '@aws-cdk/cdk-assets-lib': 1.0.1
       '@aws-cdk/cli-plugin-contract': 2.181.0
-      '@aws-cdk/cloud-assembly-schema': 45.2.0
+      '@aws-cdk/cloud-assembly-schema': 48.2.0
       '@aws-cdk/cloudformation-diff': 2.182.0(@aws-sdk/client-cloudformation@3.844.0)
-      '@aws-cdk/cx-api': 2.204.0(@aws-cdk/cloud-assembly-schema@45.2.0)
+      '@aws-cdk/cx-api': 2.204.0(@aws-cdk/cloud-assembly-schema@48.2.0)
       '@aws-sdk/client-appsync': 3.844.0
       '@aws-sdk/client-cloudcontrol': 3.844.0
       '@aws-sdk/client-cloudformation': 3.844.0
@@ -2097,7 +2120,7 @@ snapshots:
       '@smithy/util-retry': 4.0.6
       '@smithy/util-waiter': 4.0.6
       archiver: 7.0.1
-      cdk-from-cfn: 0.226.0
+      cdk-from-cfn: 0.230.0
       chalk: 4.1.2
       chokidar: 3.6.0
       fs-extra: 9.1.0
@@ -4284,12 +4307,16 @@ snapshots:
 
   at-least-node@1.0.0: {}
 
-  aws-cdk-lib@2.204.0(constructs@10.4.2):
+  aws-cdk-lib@2.208.0(constructs@10.4.2):
     dependencies:
       '@aws-cdk/asset-awscli-v1': 2.2.242
       '@aws-cdk/asset-node-proxy-agent-v6': 2.1.0
       '@aws-cdk/cloud-assembly-schema': 45.2.0
       constructs: 10.4.2
+
+  aws-cdk@2.1023.0:
+    optionalDependencies:
+      fsevents: 2.3.2
 
   b4a@1.6.7: {}
 
@@ -4333,7 +4360,7 @@ snapshots:
 
   callsites@3.1.0: {}
 
-  cdk-from-cfn@0.226.0: {}
+  cdk-from-cfn@0.230.0: {}
 
   chai@5.2.1:
     dependencies:
@@ -4599,6 +4626,9 @@ snapshots:
       graceful-fs: 4.2.11
       jsonfile: 6.1.0
       universalify: 2.0.1
+
+  fsevents@2.3.2:
+    optional: true
 
   fsevents@2.3.3:
     optional: true
